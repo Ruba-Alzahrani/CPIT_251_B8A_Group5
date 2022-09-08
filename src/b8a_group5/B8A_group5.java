@@ -16,6 +16,7 @@ public class B8A_group5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.print("Hi I am Razan Almalki");
     }
     
 }
