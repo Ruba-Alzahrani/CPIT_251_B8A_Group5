@@ -18,6 +18,7 @@ public class B8A_group5 {
         // TODO code application logic here
         System.out.print("Hi I am Razan Almalki");
         System.out.print("Hello, I am Ruba Alzahrani");
+        System.out.print("Hi, I am Raghad Alshahrani");
     }
     
 }
