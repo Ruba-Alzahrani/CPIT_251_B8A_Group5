@@ -19,6 +19,7 @@ public class B8A_group5 {
         System.out.print("Hi I am Razan Almalki");
         System.out.print("Hello, I am Ruba Alzahrani");
         System.out.print("Hi, I am Raghad Alshahrani");
+        System.out.print("Hi! I am Razan Azzhrani..");
     }
     
 }
