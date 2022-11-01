@@ -37,6 +37,7 @@ public class B8A_group5 {
 
             if (choose==3){
                 System.out.println("Service: Accessc Patient Profile");
+                PatientProfile();
                 
             }
             
@@ -118,7 +119,7 @@ public class B8A_group5 {
         return store;
     }
 
-    public static void PatientProfile(String A){
+    public static void PatientProfile(){
    
         String PaitnetInfo[] = new String[3];
         Scanner input = new Scanner(System.in);
