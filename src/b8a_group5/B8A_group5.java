@@ -15,7 +15,14 @@ public class B8A_group5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    System.out.print("----------------welcome to hospital----------------");
+    System.out.println("---------------- Welcome to Hospital Application ----------------");
+    System.out.println("------------------ Please choose the service ---------------------");
+    System.out.println("1. Appintments Booking ");
+    System.out.println("2. Online consultation  ");
+    System.out.println("3. Accessc Patient Profile  ");
+    System.out.println("4. Payemnt");
+    System.out.println("-----------------------------------------------------------------");
+     
     }
     
 }
