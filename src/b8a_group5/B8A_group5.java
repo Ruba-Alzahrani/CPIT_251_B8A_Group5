@@ -173,20 +173,34 @@ public class B8A_group5 {
         System.out.print("Enter Your ID Number: ");
         int ID = sec.nextInt();
         String [] BloodTest = new String [3];
-        BloodTest[0] = "       TEST(0)                  RESULT     PEFERRENCE INTERVAL\n"
-                + "Comp. Metabolic Panel (14)        84             65-99\n"
-                + "Sodium, Serum                     141            135-145\n"
-                + "Potassium, Serum                  4.4            3.5-5.2\n"
-                + "Chloride, Serum                   101            97-108\n"
+        BloodTest[0] = 
+                  "       TEST(0)                  RESULT     PEFERRENCE INTERVAL\n"
+                + "Comp. Metabolic Panel (14)        90             65-99\n"
+                + "Sodium, Serum                     131            135-145\n"
+                + "Potassium, Serum                  4              3.5-5.2\n"
+                + "Chloride, Serum                   99            97-108\n"
                 + "Carbon Dioxide, Serum             23             20-32\n"
-                + "Calcium, Serum                    9.9            8.7-10.2\n"
-                + "Protein, Serum                    7.6            6.0-8.5\n"
+                + "Calcium, Serum                    10.0            8.7-10.2\n"
+                + "Protein, Serum                    6.6            6.0-8.5\n"
                 + "Albumin, Serum                    4.9            3.5-5.5\n"
                 + "Globulin, Serum                   2.7            1.5-4.5\n"
-                + "A/G Ratio                         1.8            1.1-2.5";
+                + "A/G Ratio                         2.1            1.1-2.5";
 
          BloodTest[1] = 
-                "       TEST(1)                  RESULT     PEFERRENCE INTERVAL\n"
+                  "       TEST(1)                  RESULT     PEFERRENCE INTERVAL\n"
+                + "Comp. Metabolic Panel (14)        77             65-99\n"
+                + "Sodium, Serum                     145            135-145\n"
+                + "Potassium, Serum                  3.8            3.5-5.2\n"
+                + "Chloride, Serum                   105            97-108\n"
+                + "Carbon Dioxide, Serum             30             20-32\n"
+                + "Calcium, Serum                    8.9            8.7-10.2\n"
+                + "Protein, Serum                    7.6            6.0-8.5\n"
+                + "Albumin, Serum                    4.9            3.5-5.5\n"
+                + "Globulin, Serum                   2.7            1.5-4.5\n"
+                + "A/G Ratio                         1.6            1.1-2.5";
+
+         BloodTest[2] = 
+                  "       TEST(2)                  RESULT     PEFERRENCE INTERVAL\n"
                 + "Comp. Metabolic Panel (14)        84             65-99\n"
                 + "Sodium, Serum                     141            135-145\n"
                 + "Potassium, Serum                  4.4            3.5-5.2\n"
@@ -198,19 +212,6 @@ public class B8A_group5 {
                 + "Globulin, Serum                   2.7            1.5-4.5\n"
                 + "A/G Ratio                         1.8            1.1-2.5";
 
-         BloodTest[2] = "       TEST(2)                  RESULT     PEFERRENCE INTERVAL\n"
-                + "Comp. Metabolic Panel (14)        84             65-99\n"
-                + "Sodium, Serum                     141            135-145\n"
-                + "Potassium, Serum                  4.4            3.5-5.2\n"
-                + "Chloride, Serum                   101            97-108\n"
-                + "Carbon Dioxide, Serum             23             20-32\n"
-                + "Calcium, Serum                    9.9            8.7-10.2\n"
-                + "Protein, Serum                    7.6            6.0-8.5\n"
-                + "Albumin, Serum                    4.9            3.5-5.5\n"
-                + "Globulin, Serum                   2.7            1.5-4.5\n"
-                + "A/G Ratio                         1.8            1.1-2.5";
-
-        
         System.out.print("Here is Patient " + ID + " blood Test: \n" + BloodTest[ID] +'\n');
    
   
