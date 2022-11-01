@@ -42,7 +42,7 @@ public class B8A_group5 {
             
             if (choose==4){
                 System.out.println("Service: Blood Test Result");
-                Try();
+                BloodTest();
             }
             
      System.out.println("Please choose other service or 5 to exit: ");
@@ -167,7 +167,7 @@ public class B8A_group5 {
         
     }
     
-    public static void Try() {
+    public static void BloodTest() {
         Scanner sec = new Scanner(System.in);
         System.out.print("Enter Your ID Number: ");
         int ID = sec.nextInt();
