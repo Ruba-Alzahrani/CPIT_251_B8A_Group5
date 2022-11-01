@@ -15,11 +15,7 @@ public class B8A_group5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.print("Hi I am Razan Almalki");
-        System.out.print("Hello, I am Ruba Alzahrani");
-        System.out.print("Hi, I am Raghad Alshahrani");
-        System.out.print("Hi! I am Razan Azzhrani..");
+    System.out.print("----------------welcome to hospital----------------");
     }
     
 }
