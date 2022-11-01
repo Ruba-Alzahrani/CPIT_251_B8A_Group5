@@ -30,11 +30,11 @@ public class B8A_group5 {
  
             }
             
-            if (choose==2){
+            if (choose == 2) {
                 System.out.println("Service: Online consultation");
-                
+                String store = consultation();
             }
-            
+
             if (choose==3){
                 System.out.println("Service: Accessc Patient Profile");
                 
@@ -66,10 +66,58 @@ public class B8A_group5 {
         return store;
     }
 
-    public static void consultation(String A) {
+    public static String consultation() {
+        Scanner s = new Scanner(System.in);
+
+        String[] appointmentAnOnlineCon = new String[3];
+        System.out.println(appointmentAnOnlineCon[0] = "0- Dr.Sky , Monday , 10.11.2021 , 7 pm");
+        System.out.println(appointmentAnOnlineCon[1] = "1- Dr.Will , sunday , 9.11.2021 , 9 pm");
+        System.out.println(appointmentAnOnlineCon[2] = "2- Dr.Hana , Thursday , 14.11.2021 , 6 pm");
+
+        System.out.print("Choos an online appointment from 0 to 2 = ");
+        int onlineAppo = s.nextInt();
+        String store = appointmentAnOnlineCon[onlineAppo];
+        System.out.println("The appointment at " + appointmentAnOnlineCon[onlineAppo] + " is resived");
+        appointmentAnOnlineCon[onlineAppo] = "Is unavilable";
+
+        return store;
 
     }
-    
+
+    public static String payment() {
+        Scanner s = new Scanner(System.in);
+
+        String[] systemServices = {"Online con", "boold test"};
+        int[] costOfServices = {350, 100};
+        int i = 0;
+        while (i != 2) {
+            System.out.println(systemServices[i] + "  " + costOfServices[i]);
+            i++;
+        }
+
+        System.out.print("Choos an servise from 0 to 1 = ");
+        int chooseSivr = s.nextInt();
+        System.out.println("you choose " + systemServices[chooseSivr] + "  " + costOfServices[chooseSivr]);
+
+        System.out.print("write the payment amount = ");
+        int payAmount = s.nextInt();
+
+        if (payAmount == costOfServices[chooseSivr]) {
+            int sub = payAmount - costOfServices[chooseSivr];
+            System.out.println("The amount have has been taken");
+        } else {
+            while (payAmount - costOfServices[chooseSivr] != 0) {
+                System.out.println("Try again!");
+                System.out.print("write the payment amount = ");
+                payAmount = s.nextInt();
+            }
+        }
+
+        String store = systemServices[chooseSivr] + "  " + costOfServices[chooseSivr];
+
+        return store;
+    }
+
     public static void PatientProfile(String A){
    
         String PaitnetInfo[] = new String[3];
