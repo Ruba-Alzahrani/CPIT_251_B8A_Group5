@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class B8A_group5 {
 
+    int ID;
+    
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         
@@ -47,7 +49,9 @@ public class B8A_group5 {
 
             if (choose == 4) {
                 System.out.println("Service: Blood Test Result");
-                BloodTest();
+                System.out.print("Enter Your ID Number: ");
+                int ID = s.nextInt();
+                System.out.print(BloodTest(ID,s));
             }
 
             System.out.print("Please choose other service or 5 to exit: ");
@@ -169,13 +173,15 @@ public class B8A_group5 {
 
     }
 
-    public static void BloodTest() {
-        Scanner sec = new Scanner(System.in);
-        System.out.print("Enter Your ID Number: ");
-        int ID = sec.nextInt();
-        String[] BloodTest = new String[3];
-        BloodTest[0]
-                = "       TEST(0)                  RESULT     PEFERRENCE INTERVAL\n"
+    public B8A_group5(int ID) {
+        this.ID = ID;
+    }
+    
+     public static String BloodTest(int ID, Scanner s) {
+        String Pname = "";
+        String [] BloodTest = new String [3];
+        BloodTest[0] = 
+                  "       TEST(Lama)                 RESULT     PEFERRENCE INTERVAL\n"
                 + "Comp. Metabolic Panel (14)        90             65-99\n"
                 + "Sodium, Serum                     131            135-145\n"
                 + "Potassium, Serum                  4              3.5-5.2\n"
@@ -187,8 +193,8 @@ public class B8A_group5 {
                 + "Globulin, Serum                   2.7            1.5-4.5\n"
                 + "A/G Ratio                         2.1            1.1-2.5";
 
-        BloodTest[1]
-                = "       TEST(1)                  RESULT     PEFERRENCE INTERVAL\n"
+         BloodTest[1] = 
+                  "       TEST(Ahmed)                RESULT     PEFERRENCE INTERVAL\n"
                 + "Comp. Metabolic Panel (14)        77             65-99\n"
                 + "Sodium, Serum                     145            135-145\n"
                 + "Potassium, Serum                  3.8            3.5-5.2\n"
@@ -200,8 +206,8 @@ public class B8A_group5 {
                 + "Globulin, Serum                   2.7            1.5-4.5\n"
                 + "A/G Ratio                         1.6            1.1-2.5";
 
-        BloodTest[2]
-                = "       TEST(2)                  RESULT     PEFERRENCE INTERVAL\n"
+         BloodTest[2] = 
+                  "       TEST(Sarah)                RESULT     PEFERRENCE INTERVAL\n"
                 + "Comp. Metabolic Panel (14)        84             65-99\n"
                 + "Sodium, Serum                     141            135-145\n"
                 + "Potassium, Serum                  4.4            3.5-5.2\n"
@@ -213,8 +219,15 @@ public class B8A_group5 {
                 + "Globulin, Serum                   2.7            1.5-4.5\n"
                 + "A/G Ratio                         1.8            1.1-2.5";
 
-        System.out.print("Here is Patient " + ID + " blood Test: \n" + BloodTest[ID] + '\n');
+         if(BloodTest[ID]==BloodTest[0]){
+             Pname="Lama";
+         }else if (BloodTest[ID]==BloodTest[1]){
+             Pname="Ahmed";
+         }else if (BloodTest[ID]==BloodTest[2]){
+             Pname="Sarah";
+         }
         
-    }
+        return "Here is Patient "+Pname+" with ID number "+ID+" blood test: \n"+BloodTest[ID]+'\n' ;
+      }
 
 }
