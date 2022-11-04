@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package b8a_group5;
 
 import java.util.Scanner;
@@ -14,10 +10,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Ignore;
 
-/**
- *
- * @author razan
- */
+
 public class B8A_group5Test {
     
     public B8A_group5Test() {
@@ -63,7 +56,6 @@ public class B8A_group5Test {
         Appintment_information[1] = "1- Dr.Ruba, 15.11.2022 ,9 PM";
         Appintment_information[2] = "2- Dr.Raghad, 29.11.2022 ,7 PM";
        int user_selection=0;
-       // B8A_group5.Appintments(s, Appintment_information);
         String expResult = "0- Dr.Razan, 10.11.2022 ,8 PM";
         String result =  Appintment_information[user_selection];
         assertEquals(expResult, result);
@@ -76,11 +68,15 @@ public class B8A_group5Test {
     @Test
     public void testConsultation() {
         System.out.println("consultation");
-        String expResult = "";
-        String result = B8A_group5.consultation();
+        String[] appointmentAnOnlineCon = new String[3];
+        appointmentAnOnlineCon[0] = "0- Dr.Sky , Monday , 10.11.2021 , 7 pm";
+        appointmentAnOnlineCon[1] = "1- Dr.Will , sunday , 9.11.2021 , 9 pm";
+        appointmentAnOnlineCon[2] = "2- Dr.Hana , Thursday , 14.11.2021 , 6 pm";
+        int userChoose = 2;
+        String expResult = "2- Dr.Hana , Thursday , 14.11.2021 , 6 pm";
+        String result = appointmentAnOnlineCon[userChoose];
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -89,11 +85,16 @@ public class B8A_group5Test {
     @Test
     public void testPayment() {
         System.out.println("payment");
-        String expResult = "";
-        String result = B8A_group5.payment();
+        String[] format = {"0- ", "1- "};
+        String[] systemServices = {"Online consultation", "boold test"};
+        int[] costOfServices = {350, 100};
+        int userChooseService = 0;
+        int payAmountEnterd = 350;
+        int expResult = 0;
+        //HERE THE USER ALREADY CHOOSE THE FIRST SERVER.
+        int result = payAmountEnterd - costOfServices[userChooseService];
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
