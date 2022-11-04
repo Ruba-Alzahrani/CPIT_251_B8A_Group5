@@ -90,34 +90,21 @@ public class B8A_group5 {
 
     }
 
-    public static String payment() {
+    public static int payment() {
         Scanner s = new Scanner(System.in);
         
         System.out.println("-------------------------------------------");
-        System.out.println("Choose from the services to pay");
-        System.out.println("-------------------------------------------");
-        String [] format = {"0- ", "1- "};
-        String[] systemServices = {"Online consultation", "boold test"};
-        int[] costOfServices = {350, 100};
-        
-        int i = 0;
-        while (i != 2) {
-            System.out.println(format [i] + systemServices[i] + "  " + costOfServices[i]);
-            i++;
-        }
-
-        System.out.print("Choos an servise from 0 to 1 = ");
-        int chooseSivr = s.nextInt();
-        System.out.println("you choose " + systemServices[chooseSivr] + "  " + costOfServices[chooseSivr]);
-
+        int costOfServices = 350;
+        System.out.print("The Online consultation cost ");
+        System.out.println(costOfServices);
         System.out.print("write the payment amount = ");
         int payAmount = s.nextInt();
 
-        if (payAmount == costOfServices[chooseSivr]) {
-            int sub = payAmount - costOfServices[chooseSivr];
+        if (payAmount == costOfServices) {
+            int sub = payAmount - costOfServices;
             System.out.println("The amount has been deducted");
         } else {
-            while (payAmount - costOfServices[chooseSivr] != 0) {
+            while (payAmount - costOfServices != 0) {
                 System.out.println("Try again! you typed the wrong amount");
                 System.out.print("write the payment amount = ");
                 payAmount = s.nextInt();
@@ -125,7 +112,7 @@ public class B8A_group5 {
             System.out.println("The correct amount has been deducted");
         }
 
-        String store = systemServices[chooseSivr] + "  " + costOfServices[chooseSivr];
+        int store = costOfServices;
 
         return store;
     }
@@ -228,7 +215,6 @@ public class B8A_group5 {
 
         System.out.print("Here is Patient " + ID + " blood Test: \n" + BloodTest[ID] + '\n');
         
-        payment();
     }
 
 }
