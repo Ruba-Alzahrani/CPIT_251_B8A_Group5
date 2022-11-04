@@ -85,16 +85,10 @@ public class B8A_group5Test {
     @Test
     public void testPayment() {
         System.out.println("payment");
-        String[] format = {"0- ", "1- "};
-        String[] systemServices = {"Online consultation", "boold test"};
-        int[] costOfServices = {350, 100};
-        int userChooseService = 0;
-        int payAmountEnterd = 350;
+        int costOfServices = 350;
         int expResult = 0;
-        //HERE THE USER ALREADY CHOOSE THE FIRST SERVER.
-        int result = payAmountEnterd - costOfServices[userChooseService];
+        int result = costOfServices - costOfServices;
         assertEquals(expResult, result);
-
     }
 
     /**
