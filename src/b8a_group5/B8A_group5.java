@@ -119,8 +119,7 @@ public class B8A_group5 {
     }
 
     public static void PatientProfile() {
-
-        String PaitnetInfo[] = new String[3];
+  String PaitnetInfo[] = new String[3];
         Scanner input = new Scanner(System.in);
 
         PaitnetInfo[0] = "Name: Lama\n"
@@ -136,32 +135,38 @@ public class B8A_group5 {
                 + "Blood Type: A\n";
 
         PaitnetInfo[2] = "Name: Sarah\n"
-                + "Gender: Fmale\n"
+                + "Gender: Female\n"
                 + "Highet: 155 cm\n"
                 + "Weight: 52 kg\n"
                 + "Blood Type: O+\n";
 
         System.out.print("Enter Patient ID: ");
         int patientID = input.nextInt();
-
-        if (!(patientID == 0 || patientID == 1 || patientID == 2)) {
-            boolean g = false;
+        checkPatientID(patientID);
+        boolean result = false;
             do {
+                if (checkPatientID(patientID) == false) {
 
                 System.out.println("please Try again!");
                 System.out.print("Enter Patient ID: ");
                 patientID = input.nextInt();
 
-                if ((patientID == 0 || patientID == 1 || patientID == 2)) {
-                    g = true;
+                } else {
+                   result = checkPatientID(patientID) ;
                 }
-            } while (g == false);
-            {
+            } while (result == false);
+            
+        
+        
+        System.out.println("\n"+PaitnetInfo[patientID]);
 
-            }
+    }
+    public static boolean checkPatientID(int patienid) {
+        if (patienid == 0 || patienid == 1 || patienid == 2) {
+            return true;
+        } else {
+            return false;
         }
-
-        System.out.println(PaitnetInfo[patientID]);
 
     }
 
