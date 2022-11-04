@@ -115,11 +115,24 @@ public class B8A_group5Test {
      * Test of BloodTest method, of class B8A_group5.
      */
     @Test
-    public void testBloodTest() {
+     public void testBloodTest() {
         System.out.println("BloodTest");
-        B8A_group5.BloodTest();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        B8A_group5 instance = new B8A_group5(1);
+         String expResult =
+        "Here is Patient Ahmed with ID number 1 blood test: \n"
+                 + "       TEST(Ahmed)                RESULT     PEFERRENCE INTERVAL\n"
+                 + "Comp. Metabolic Panel (14)        77             65-99\n"
+                 + "Sodium, Serum                     145            135-145\n"
+                 + "Potassium, Serum                  3.8            3.5-5.2\n"
+                 + "Chloride, Serum                   105            97-108\n"
+                 + "Carbon Dioxide, Serum             30             20-32\n"
+                 + "Calcium, Serum                    8.9            8.7-10.2\n"
+                 + "Protein, Serum                    7.6            6.0-8.5\n"
+                 + "Albumin, Serum                    4.9            3.5-5.5\n"
+                 + "Globulin, Serum                   2.7            1.5-4.5\n"
+                 + "A/G Ratio                         1.6            1.1-2.5";
+        String result = instance.toString();
+        assertNotSame(expResult, result);
     }
     
 }
