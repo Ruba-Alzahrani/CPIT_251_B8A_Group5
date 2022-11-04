@@ -5,12 +5,17 @@ import java.util.Scanner;
 public class B8A_group5 {
 
     public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
         String Appintment_information[] = new String[3];
-
         Appintment_information[0] = "0- Dr.Razan, 10.11.2022 ,8 PM";
         Appintment_information[1] = "1- Dr.Ruba, 15.11.2022 ,9 PM";
         Appintment_information[2] = "2- Dr.Raghad, 29.11.2022 ,7 PM";
-        Scanner s = new Scanner(System.in);
+        
+        String[] appointmentAnOnlineCon = new String[3];
+        appointmentAnOnlineCon[0] = "0- Dr.Sky , Monday , 10.11.2021 , 7 pm";
+        appointmentAnOnlineCon[1] = "1- Dr.Will , sunday , 9.11.2021 , 9 pm";
+        appointmentAnOnlineCon[2] = "2- Dr.Hana , Thursday , 14.11.2021 , 6 pm";
 
         System.out.println("---------------- Welcome to Hospital Application ----------------");
         System.out.println("1. Appintments Booking ");
@@ -31,7 +36,7 @@ public class B8A_group5 {
 
             if (choose == 2) {
                 System.out.println("Service: Online consultation");
-                String store = consultation();
+                String store = consultation(appointmentAnOnlineCon);
             }
 
             if (choose == 3) {
@@ -45,7 +50,7 @@ public class B8A_group5 {
                 BloodTest();
             }
 
-            System.out.println("Please choose other service or 5 to exit: ");
+            System.out.print("Please choose other service or 5 to exit: ");
             choose = s.nextInt();
 
         } while (!(choose == 5));
@@ -66,32 +71,38 @@ public class B8A_group5 {
         return store;
     }
 
-    public static String consultation() {
+    public static String consultation(String appointmentAnOnlineCon[]) {
         Scanner s = new Scanner(System.in);
+        for (int i = 0; i < appointmentAnOnlineCon.length; i++) {
+            System.out.println("The Appintments are:  ");
+            System.out.println(appointmentAnOnlineCon[i]);
+            System.out.println("-------------------------------------------");
+        }
 
-        String[] appointmentAnOnlineCon = new String[3];
-        System.out.println(appointmentAnOnlineCon[0] = "0- Dr.Sky , Monday , 10.11.2021 , 7 pm");
-        System.out.println(appointmentAnOnlineCon[1] = "1- Dr.Will , sunday , 9.11.2021 , 9 pm");
-        System.out.println(appointmentAnOnlineCon[2] = "2- Dr.Hana , Thursday , 14.11.2021 , 6 pm");
-
-        System.out.print("Choos an online appointment from 0 to 2 = ");
+        System.out.print("Choose an online appointment from 0 to 2 = ");
         int onlineAppo = s.nextInt();
         String store = appointmentAnOnlineCon[onlineAppo];
-        System.out.println("The appointment at " + appointmentAnOnlineCon[onlineAppo] + " is resived");
+        System.out.println("The selected online appointment has been added to your Profile");
         appointmentAnOnlineCon[onlineAppo] = "Is unavilable";
-
-        return store;
+        
+        payment();
+        return store;      
 
     }
 
     public static String payment() {
         Scanner s = new Scanner(System.in);
-
-        String[] systemServices = {"Online con", "boold test"};
+        
+        System.out.println("-------------------------------------------");
+        System.out.println("Choose from the services to pay");
+        System.out.println("-------------------------------------------");
+        String [] format = {"0- ", "1- "};
+        String[] systemServices = {"Online consultation", "boold test"};
         int[] costOfServices = {350, 100};
+        
         int i = 0;
         while (i != 2) {
-            System.out.println(systemServices[i] + "  " + costOfServices[i]);
+            System.out.println(format [i] + systemServices[i] + "  " + costOfServices[i]);
             i++;
         }
 
@@ -104,13 +115,14 @@ public class B8A_group5 {
 
         if (payAmount == costOfServices[chooseSivr]) {
             int sub = payAmount - costOfServices[chooseSivr];
-            System.out.println("The amount have has been taken");
+            System.out.println("The amount has been deducted");
         } else {
             while (payAmount - costOfServices[chooseSivr] != 0) {
-                System.out.println("Try again!");
+                System.out.println("Try again! you typed the wrong amount");
                 System.out.print("write the payment amount = ");
                 payAmount = s.nextInt();
             }
+            System.out.println("The correct amount has been deducted");
         }
 
         String store = systemServices[chooseSivr] + "  " + costOfServices[chooseSivr];
@@ -215,7 +227,8 @@ public class B8A_group5 {
                 + "A/G Ratio                         1.8            1.1-2.5";
 
         System.out.print("Here is Patient " + ID + " blood Test: \n" + BloodTest[ID] + '\n');
-
+        
+        payment();
     }
 
 }
