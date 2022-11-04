@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Ignore;
 
 /**
  *
@@ -98,12 +99,21 @@ public class B8A_group5Test {
     /**
      * Test of PatientProfile method, of class B8A_group5.
      */
-    @Test
+    @Ignore
     public void testPatientProfile() {
         System.out.println("PatientProfile");
         B8A_group5.PatientProfile();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+     @Test
+    public void testCheckPatientID() {
+        System.out.println("checkPatientID");
+        // testing for a vaule in the range
+        assertTrue(B8A_group5.checkPatientID(2));
+        // testing for a value out of the range 
+        assertFalse(B8A_group5.checkPatientID(4));
+
     }
 
     /**
