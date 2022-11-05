@@ -28,6 +28,44 @@ public class B8A_group5 {
         System.out.println("------------------------------------------------------------------");
         System.out.print("Please choose the service: ");
 
+        String [] BloodTest = new String [3];
+        BloodTest[0] = 
+                  "       TEST(Lama)                 RESULT     PEFERRENCE INTERVAL\n"
+                + "Comp. Metabolic Panel (14)        90             65-99\n"
+                + "Sodium, Serum                     131            135-145\n"
+                + "Potassium, Serum                  4              3.5-5.2\n"
+                + "Chloride, Serum                   99            97-108\n"
+                + "Carbon Dioxide, Serum             23             20-32\n"
+                + "Calcium, Serum                    10.0            8.7-10.2\n"
+                + "Protein, Serum                    6.6            6.0-8.5\n"
+                + "Albumin, Serum                    4.9            3.5-5.5\n"
+                + "Globulin, Serum                   2.7            1.5-4.5\n"
+                + "A/G Ratio                         2.1            1.1-2.5";
+         BloodTest[1] = 
+                  "       TEST(Ahmed)                RESULT     PEFERRENCE INTERVAL\n"
+                + "Comp. Metabolic Panel (14)        77             65-99\n"
+                + "Sodium, Serum                     145            135-145\n"
+                + "Potassium, Serum                  3.8            3.5-5.2\n"
+                + "Chloride, Serum                   105            97-108\n"
+                + "Carbon Dioxide, Serum             30             20-32\n"
+                + "Calcium, Serum                    8.9            8.7-10.2\n"
+                + "Protein, Serum                    7.6            6.0-8.5\n"
+                + "Albumin, Serum                    4.9            3.5-5.5\n"
+                + "Globulin, Serum                   2.7            1.5-4.5\n"
+                + "A/G Ratio                         1.6            1.1-2.5";
+         BloodTest[2] = 
+                  "       TEST(Sarah)                RESULT     PEFERRENCE INTERVAL\n"
+                + "Comp. Metabolic Panel (14)        84             65-99\n"
+                + "Sodium, Serum                     141            135-145\n"
+                + "Potassium, Serum                  4.4            3.5-5.2\n"
+                + "Chloride, Serum                   101            97-108\n"
+                + "Carbon Dioxide, Serum             23             20-32\n"
+                + "Calcium, Serum                    9.9            8.7-10.2\n"
+                + "Protein, Serum                    7.6            6.0-8.5\n"
+                + "Albumin, Serum                    4.9            3.5-5.5\n"
+                + "Globulin, Serum                   2.7            1.5-4.5\n"
+                + "A/G Ratio                         1.8            1.1-2.5";
+        
         int choose = s.nextInt();
         do {
             if (choose == 1) {
@@ -51,7 +89,7 @@ public class B8A_group5 {
                 System.out.println("Service: Blood Test Result");
                 System.out.print("Enter Your ID Number: ");
                 int ID = s.nextInt();
-                System.out.print(BloodTest(ID,s));
+                System.out.print(BloodTest(ID,s,BloodTest));
             }
 
             System.out.print("Please choose other service or 5 to exit: ");
@@ -180,48 +218,9 @@ public class B8A_group5 {
         this.ID = ID;
     }
     
-     public static String BloodTest(int ID, Scanner s) {
+     public static String BloodTest(int ID, Scanner s, String BloodTest []) {
         String Pname = "";
-        String [] BloodTest = new String [3];
-        BloodTest[0] = 
-                  "       TEST(Lama)                 RESULT     PEFERRENCE INTERVAL\n"
-                + "Comp. Metabolic Panel (14)        90             65-99\n"
-                + "Sodium, Serum                     131            135-145\n"
-                + "Potassium, Serum                  4              3.5-5.2\n"
-                + "Chloride, Serum                   99            97-108\n"
-                + "Carbon Dioxide, Serum             23             20-32\n"
-                + "Calcium, Serum                    10.0            8.7-10.2\n"
-                + "Protein, Serum                    6.6            6.0-8.5\n"
-                + "Albumin, Serum                    4.9            3.5-5.5\n"
-                + "Globulin, Serum                   2.7            1.5-4.5\n"
-                + "A/G Ratio                         2.1            1.1-2.5";
-
-         BloodTest[1] = 
-                  "       TEST(Ahmed)                RESULT     PEFERRENCE INTERVAL\n"
-                + "Comp. Metabolic Panel (14)        77             65-99\n"
-                + "Sodium, Serum                     145            135-145\n"
-                + "Potassium, Serum                  3.8            3.5-5.2\n"
-                + "Chloride, Serum                   105            97-108\n"
-                + "Carbon Dioxide, Serum             30             20-32\n"
-                + "Calcium, Serum                    8.9            8.7-10.2\n"
-                + "Protein, Serum                    7.6            6.0-8.5\n"
-                + "Albumin, Serum                    4.9            3.5-5.5\n"
-                + "Globulin, Serum                   2.7            1.5-4.5\n"
-                + "A/G Ratio                         1.6            1.1-2.5";
-
-         BloodTest[2] = 
-                  "       TEST(Sarah)                RESULT     PEFERRENCE INTERVAL\n"
-                + "Comp. Metabolic Panel (14)        84             65-99\n"
-                + "Sodium, Serum                     141            135-145\n"
-                + "Potassium, Serum                  4.4            3.5-5.2\n"
-                + "Chloride, Serum                   101            97-108\n"
-                + "Carbon Dioxide, Serum             23             20-32\n"
-                + "Calcium, Serum                    9.9            8.7-10.2\n"
-                + "Protein, Serum                    7.6            6.0-8.5\n"
-                + "Albumin, Serum                    4.9            3.5-5.5\n"
-                + "Globulin, Serum                   2.7            1.5-4.5\n"
-                + "A/G Ratio                         1.8            1.1-2.5";
-
+        
          if(BloodTest[ID]==BloodTest[0]){
              Pname="Lama";
          }else if (BloodTest[ID]==BloodTest[1]){
