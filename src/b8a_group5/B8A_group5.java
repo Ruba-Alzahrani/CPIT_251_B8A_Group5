@@ -27,6 +27,8 @@ public class B8A_group5 {
         System.out.println("5. exit");
         System.out.println("------------------------------------------------------------------");
         System.out.print("Please choose the service: ");
+        
+        
 
         String [] BloodTest = new String [3];
         BloodTest[0] = 
@@ -80,8 +82,8 @@ public class B8A_group5 {
             }
 
             if (choose == 3) {
-                System.out.println("Service: Accessc Patient Profile");
-                PatientProfile();
+                System.out.println("Service: Accessc Patient Profile");   
+                String profile = PatientProfile();
 
             }
 
@@ -159,10 +161,13 @@ public class B8A_group5 {
         return store;
     }
 
-    public static void PatientProfile() {
+    public static String PatientProfile() {
+ 
         String PaitnetInfo[] = new String[3];
-        Scanner input = new Scanner(System.in);
-
+        Scanner input = new Scanner(System.in); 
+        String Store ="";
+             
+           
         PaitnetInfo[0] = "Name: Lama\n"
                 + "Age: 23\n"
                 + "Gender: Female\n"
@@ -183,9 +188,9 @@ public class B8A_group5 {
                 + "Highet: 155 cm\n"
                 + "Weight: 52 kg\n"
                 + "Blood Type: O+\n";
-
         System.out.print("Enter Patient ID: ");
-        int patientID = input.nextInt();
+       
+        int  patientID = input.nextInt();
         checkPatientID(patientID);
         boolean result = false;
             do {
@@ -200,9 +205,14 @@ public class B8A_group5 {
                 }
             } while (result == false);
             
+            System.out.println( "\n"+PaitnetInfo[patientID]);
+            
+            Store = PaitnetInfo[patientID];
+            return Store;
+            
         
         
-        System.out.println("\n"+PaitnetInfo[patientID]);
+       
 
     }
     public static boolean checkPatientID(int patienid) {
