@@ -125,18 +125,10 @@ public class B8A_group5 {
 
         System.out.print("Choose an online appointment from 0 to 2 = ");
         int onlineAppo = s.nextInt();
-        String store = appointmentAnOnlineCon[onlineAppo];
+        String storeS = appointmentAnOnlineCon[onlineAppo];
         System.out.println("The selected online appointment has been added to your Profile");
         appointmentAnOnlineCon[onlineAppo] = "Is unavilable";
-        
-        payment();
-        return store;      
 
-    }
-
-    public static int payment() {
-        Scanner s = new Scanner(System.in);
-        
         System.out.println("-------------------------------------------");
         int costOfServices = 350;
         System.out.print("The Online consultation cost ");
@@ -155,11 +147,14 @@ public class B8A_group5 {
             }
             System.out.println("The correct amount has been deducted");
         }
+        int storeI = costOfServices;
+        
+        String Stores = storeS +" payment = "+ storeI;
+        
+        return Stores;
 
-        int store = costOfServices;
-
-        return store;
     }
+
 
     public static String PatientProfile() {
  

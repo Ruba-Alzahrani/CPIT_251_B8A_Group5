@@ -68,23 +68,6 @@ public class B8A_group5Test {
     @Test
     public void testConsultation() {
         System.out.println("consultation");
-        String[] appointmentAnOnlineCon = new String[3];
-        appointmentAnOnlineCon[0] = "0- Dr.Sky , Monday , 10.11.2021 , 7 pm";
-        appointmentAnOnlineCon[1] = "1- Dr.Will , sunday , 9.11.2021 , 9 pm";
-        appointmentAnOnlineCon[2] = "2- Dr.Hana , Thursday , 14.11.2021 , 6 pm";
-        int userChoose = 2;
-        String expResult = "2- Dr.Hana , Thursday , 14.11.2021 , 6 pm";
-        String result = appointmentAnOnlineCon[userChoose];
-        assertEquals(expResult, result);
-
-    }
-
-    /**
-     * Test of payment method, of class B8A_group5.
-     */
-    @Test
-    public void testPayment() {
-        System.out.println("payment");
         int costOfServices = 350;
         int expResult = 0;
         int result = costOfServices - costOfServices;
