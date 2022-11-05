@@ -122,22 +122,25 @@ public class B8A_group5 {
     }
 
     public static void PatientProfile() {
-  String PaitnetInfo[] = new String[3];
+        String PaitnetInfo[] = new String[3];
         Scanner input = new Scanner(System.in);
 
         PaitnetInfo[0] = "Name: Lama\n"
+                + "Age: 23\n"
                 + "Gender: Female\n"
                 + "Highet: 160 cm\n"
                 + "Weight: 55 kg\n"
                 + "Blood Type: O\n";
 
         PaitnetInfo[1] = "Name: Ahmed\n"
+                + "Age: 27\n"
                 + "Gender: Male\n"
                 + "Highet: 180 cm\n"
                 + "Weight: 70 kg\n"
                 + "Blood Type: A\n";
 
         PaitnetInfo[2] = "Name: Sarah\n"
+                + "Age: 25\n"
                 + "Gender: Female\n"
                 + "Highet: 155 cm\n"
                 + "Weight: 52 kg\n"
